@@ -12,7 +12,7 @@ with open('similarity.pkl.xz', 'rb') as f:  # Open in binary mode
     compressed_data = f.read()
 similarity = pickle.loads(lzma.decompress(compressed_data))
 
-selected_movie_name = st.selectbox('How would you like to be contacted?', movies)
+selected_movie_name = st.selectbox('Movie Name:', movies)
 number = st.slider('Number of Movies: ', 1, 50, 5)
 
 def recommend(movie,number):
